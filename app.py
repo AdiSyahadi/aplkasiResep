@@ -56,6 +56,9 @@ def main():
 
     if selector == "picture":
         data = st.file_uploader(label="Upload image")
+        st.text('Jenis file wajib JPG')
+        df = pd.DataFrame(np.random.randn(50, 20), columns=("col %d" % i for i in range(20)))
+        st.dataframe(df)  
 
     elif selector == "camera":
         data = st.camera_input("Take a picture")
